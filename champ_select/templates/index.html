@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+</head>
+<body>
+    <!-- Nav bar -->
+    <ul id="navbar">
+        <li><a href="/">Random</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Filter Bad -->
+    <div id="filter">Filter</div>
+    <div id="menu-container">
+       <div id="menu-wrapper">
+          <div id="hamburger-menu"><span></span><span></span><span></span></div>
+          <!-- hamburger-menu -->
+       </div>
+       <!-- menu-wrapper -->
+        <form action="" method="post" id="filt_form">
+       <ul class="menu-list accordion">
+          <li id="nav1" class="toggle accordion-toggle">
+             <span class="icon-plus"></span>
+             <a class="menu-link" href="#">Role</a>
+          </li>
+          <!-- accordion-toggle -->
+          <ul class="menu-submenu accordion-content">
+              <!--<form action="" method="post">-->
+                    <li><a class="head" href="#"><input type="checkbox" id="top" name="role" value="top">Top</a></li>
+                    <li><a class="head" href="#"><input type="checkbox" id="middle" name="role" value="middle">Middle</a></li>
+                    <li><a class="head" href="#"><input type="checkbox" id="jungle" name="role" value="jungle">Jungle</a></li>
+                    <li><a class="head" href="#"><input type="checkbox" id="adc" name="role" value="adc">ADC</a></li>
+                    <li><a class="head" href="#"><input type="checkbox" id="support" name="role" value="support">Support</a></li>
+                    <input type="checkbox" class="selectall_btn" onclick="toggle_role(this)"/>Select All<br/>
+              <!--</form>-->
+          </ul>
+          <!-- menu-submenu accordon-content-->
+          <li id="nav2" class="toggle accordion-toggle">
+             <span class="icon-plus"></span>
+             <a class="menu-link" href="#">AD/AP</a>
+          </li>
+          <!-- accordion-toggle -->
+          <ul class="menu-submenu accordion-content">
+              <!--<form action="" method="post" id="ad_ap_form">-->
+                  <li><a class="head" href="#"><input type="checkbox" id="ad" name="ad-ap" value="ad">AD</a></li>
+                  <li><a class="head" href="#"><input type="checkbox" id="ap" name="ad-ap" value="ap">AP</a></li>
+                  <li><a class="head" href="#"><input type="checkbox" id="hybrid" name="ad-ap" value="hybrid">Hybrid</a></li>
+                  <input type="checkbox" class="selectall_btn" onclick="toggle_dmg(this)"/>Select All<br/>
+              <!--</form>-->
+          </ul>
+          <!-- menu-submenu accordon-content-->
+               <li id="nav3" class="toggle accordion-toggle">
+             <span class="icon-plus"></span>
+             <a class="menu-link" href="#">Faction</a>
+          </li>
+          <!-- accordion-toggle -->
+          <ul class="menu-submenu accordion-content">
+              <!--<form action="" method="post" id="fact_form">-->
+                 <li><input type="checkbox" id="bandlecity" name="faction" value="bandlecity">Bandle City</li>
+                 <li><input type="checkbox" id="bilgewater" name="faction" value="bilgewater">Bilgewater</li>
+                 <li><input type="checkbox" id="demacia" name="faction" value="demacia" >Demacia</li>
+                 <li><input type="checkbox" id="frejlord" name="faction" value="frejlord">Frejlord</li>
+                 <li><input type="checkbox" id="temp_fac" name="faction" value="temp_fac">temp_fac</li>
+                 <input type="checkbox" class="selectall_btn" onclick="toggle(this)"/>Select All<br/>
+              <!--</form>-->
+          </ul>
+
+          <!-- menu-submenu accordon-content-->
+       </ul>
+    </form>
+       <!-- menu-list accordion-->
+    </div>
+    <!-- menu-container -->
+    <div id="border"></div>
+    <div id="border2"></div>
+    <p id="title">RANDOM CHAMPION SELECTOR</p>
+
+    <div id="center_btn">
+        <button type ="submit" form ="filt_form" class="button" id="pick"><span>Pick!</span></button>
+        <a href="/champselect"><button class="button" id="champ_btn"><span>List of Champions</span></button></a>
+    </div>
+
+    <!-- champ name and icon -->
+    <div id="champname">{{ chosen_champ }}</div>
+    <div id="champ" style="background-image:url('../static/img/{{chosen_champ}}.png');"></div>
+
+    <!-- Debugging -->
+    <!-- <h1>{{ chosen_champ }}</h1>
+    <h1>{{ faction }}</h1>
+    <h1>{{ ad_ap }}</h1>
+    <h1> {{ champ_filt }}</h1> -->
+
+    <p id="disclaimer">Random Champion Selector isn’t endorsed by Riot Games and doesn’t
+        reflect the views or opinions of Riot Games or anyone officially involved in producing
+        or managing League of Legends. League of Legends and Riot Games are trademarks or
+        registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+</body>
+</html>

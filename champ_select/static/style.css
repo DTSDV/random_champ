@@ -1,0 +1,289 @@
+html {
+    background-image:url("img/lol.jpg");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Creating the navbar */
+#navbar {
+    position:absolute;
+    margin:0;
+    padding:0;
+    left:12em;
+    top:1em;
+}
+
+#navbar li {
+    float:left;
+}
+
+#navbar li a {
+    display:block;
+    padding:8px;
+    color:white;
+}
+
+#navbar li a:hover {
+    color:black;
+}
+
+#filter {
+    position:absolute;
+    color:white;
+    top:1.5em;
+    left:4em;
+    letter-spacing:3px;
+}
+
+#title {
+    font-size:500%;
+    text-align:center;
+    font-family:Century Gothic;
+    letter-spacing:3px;
+    color:white;
+    margin:0 auto;
+    width:600px;
+}
+
+/* Generate Button */
+.button {
+  position:relative;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Champ Button */
+#champ_btn {
+    width:300px;
+    background-color:green;
+}
+
+#champ_btn_div{
+    position:relative;
+    left:13em;
+    top:-5.5em;
+}
+
+#center_btn {
+    position:relative;
+    margin:0 auto;
+    text-align:center;
+}
+
+#pick {
+    position:relative;
+}
+/* Side Bar */
+ul { list-style: none; }
+a { text-decoration: none; color: black;}
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+#menu-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+#menu-wrapper #hamburger-menu {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    margin: 15px;
+}
+
+#menu-wrapper #hamburger-menu span {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    position: absolute;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+#menu-wrapper #hamburger-menu span:nth-child(1) {
+    top: 0;
+}
+#menu-wrapper #hamburger-menu span:nth-child(2) {
+    top: 9px;
+}
+#menu-wrapper #hamburger-menu span:nth-child(3) {
+    top: 18px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    left: -60px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#menu-container .menu-list .menu-submenu {
+    padding-bottom: 20px;
+}
+#menu-container .menu-list {
+    padding-left: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: -100%;
+}
+
+#menu-container .menu-list li.accordion-toggle, #menu-container .menu-list .menu-login {
+    font-size: 16px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-top: 1px solid #dbdcd2;
+}
+#menu-container .menu-list li:first-of-type {
+    border-top: 0;
+}
+
+.accordion-toggle, .accordion-content {
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+  .accordion-content {
+    display: none;
+}
+.accordion-toggle span[class^='icon-'] {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    top: calc(50% - 16px);
+}
+.accordion-toggle span.icon-plus, .accordion-toggle span.icon-minus {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.accordion-toggle span.icon-plus {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.icon-minus:before {
+    content: "\2013"
+}
+
+.icon-plus:before {
+    content: "+"
+}
+
+/* Champion Name */
+#champname {
+    position:relative;
+    text-align:center;
+    color:white;
+    font-size:200%;
+    top:3em;
+}
+
+/* Champion Icon */
+#champ {
+    position:relative;
+    color:white;
+    text-align:center;
+    top:7em;
+    margin:0 auto;
+    height:120px;
+    width:120px;
+    border-radius:15px;
+}
+
+/* Background Border */
+#border {
+    position:absolute;
+    color:black;
+    background-color:black;
+    max-width:350px;
+    height:90vh;
+    width:100%;
+    opacity:0.76;
+    z-index:-100;
+    left:50%;
+}
+
+#border2 {
+    position:absolute;
+    color:black;
+    background-color:black;
+    max-width:350px;
+    height:90vh;
+    width:100%;
+    opacity:0.76;
+    z-index:-100;
+    right:50%;
+}
+
+#disclaimer {
+    position:absolute;
+    width:99%;
+    color:white;
+    font-size:80%;
+    bottom:0.3em;
+    text-align:center;
+}

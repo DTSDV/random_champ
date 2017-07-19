@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/champstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/champ_select.js"></script>
+</head>
+<body>
+        
+        <div>
+            {% for champ in champlist %}
+                <div><a class="clicker" id="{{champ}}"><img src="../static/img/{{champ}}.png"</a></div>
+            {% endfor %}
+
+        </div>
+        <div id="button_wrapper">
+            <form method="post" role="form">
+                <button class="button" id="finish">Finish</button>
+            </form>
+            <button class="button" id="selectall">Select All</button>
+            <button class="button" id="deselectall">Deselect All</button>
+
+        </div>
+        
+        <a id="myLink"></a>
+</body>
+</html>

@@ -1,0 +1,65 @@
+html {
+    background-image:url("img/lol.jpg");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Creating the navbar */
+#navbar {
+    position:absolute;
+    margin:0;
+    padding:0;
+    left:12em;
+    top:1em;
+}
+
+#navbar li {
+    float:left;
+}
+
+#navbar li a {
+    display:block;
+    padding:8px;
+    color:white;
+}
+
+#navbar li a:hover {
+    color:black;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: black;}
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+/* About Section */
+#aboutsection {
+    position:relative;
+    background: rgba(0, 0, 0, 0.7);
+    width:500px;
+    margin:0 auto;
+    top:6em;
+    padding:3px 60px 13px 60px;
+    color:white;
+}
+
+#aboutsection h1 {
+    text-align:center;
+    letter-spacing:2px;
+}
+
+#aboutsection p {
+    letter-spacing:1px;
+}
+
+#disclaimer {
+    position:absolute;
+    width:99%;
+    color:white;
+    font-size:80%;
+    bottom:0.3em;
+    text-align:center;
+}
